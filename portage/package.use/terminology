@@ -1,0 +1,11 @@
+# 
+# X bmp eet egl fontconfig gif gles glib ico nls png ppm psd pulseaudio
+# sdl sound ssl systemd tiff -debug -doc -drm -fbcon -fribidi -gnutls
+# -gstreamer -harfbuzz -ibus -jpeg2k -libressl (-neon) -oldlua -opengl physics
+# (-pixman) -scim -tga -tslib -unwind -v4l -valgrind -wayland -webp -xim -xine
+# -xpm
+
+
+dev-libs/efl -opengl -sdl gles gles2 egl glib physics
+media-libs/elementary -sdl
+#media-libs/mesa gles2
