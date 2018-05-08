@@ -1,3 +1,4 @@
+```
 lspci output: 
 00:00.0 Host bridge: Intel Corporation Haswell-ULT DRAM Controller (rev 0b)
 00:02.0 VGA compatible controller: Intel Corporation Haswell-ULT Integrated Graphics Controller (rev 0b)
@@ -13,3 +14,4 @@ lspci output:
 00:1f.3 SMBus: Intel Corporation 8 Series SMBus Controller (rev 04)
 02:00.0 Network controller: Realtek Semiconductor Co., Ltd. RTL8723BE PCIe Wireless Network Adapter
 03:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 10)
+```
