@@ -1,0 +1,71 @@
+dev-lang/python tk
+sys-devel/gcc pie nptl
+sys-boot/grub efiemu fonts
+
+# ppp and modemmanager required for this conflict, check it later:
+# emerge: there are no ebuilds built with USE flags to satisfy ">=net-misc/networkmanager-1.2.0:=[modemmanager]".
+# !!! One of the following packages is required to complete your request:
+# - net-misc/networkmanager-1.8.4::gentoo (Change USE: +modemmanager, this change violates use flag constraints defined by net-misc/networkmanager-1.8.4: 'modemmanager? ( ppp ) vala? ( introspection ) wext? ( wifi ) exactly-one-of ( nss gnutls ) at-most-one-of ( consolekit elogind systemd )')
+net-misc/networkmanager -wext -dhclient wifi -connection-sharing dhclient ppp modemmanager
+
+net-misc/dhcp -server
+sys-kernel/genkernel firmware
+sys-kernel/gentoo-sources symlink
+sys-apps/portage -rsync-verify
+
+#app-text/asciidoc PYTHON_SINGLE_TARGET: python2_7
+#python_single_target2_7
+
+# required by kde-misc/synaptiks-0.8.1-r4::gentoo
+# required by kde-misc/synaptiks (argument)
+>=dev-python/pyudev-0.16.1-r1 pyqt4
+>=app-editors/vim-7.4.769 -vim-pager -X
+>=app-editors/gvim-7.4.769 -gtk gtk3
+gnome-base/gnome-session branding
+
+# required by gnome-base/gnome-keyring-3.20.0::gentoo
+# required by gnome-base/libgnome-keyring-3.12.0::gentoo
+# required by app-editors/atom-1.13.1::gentoo
+# required by app-editors/atom (argument)
+>=app-crypt/pinentry-0.9.7-r1 gnome-keyring
+
+# required by dev-util/electron-1.3.13-r1::gentoo[system-ffmpeg]
+# required by app-editors/atom-1.13.1::gentoo
+# required by app-editors/atom (argument)
+>=media-video/ffmpeg-2.8.10 opus vpx
+
+# required by app-editors/atom-1.13.1::gentoo
+# required by app-editors/atom (argument)
+>=dev-libs/libgit2-0.24.6 ssh
+
+# required by www-client/firefox-45.7.0::gentoo
+# required by firefox (argument)
+>=dev-lang/python-2.7.12:2.7 sqlite
+
+# required by dev-ruby/rdoc-4.2.0::gentoo[ruby_targets_ruby22]
+# required by dev-lang/ruby-2.2.7-r4::gentoo[rdoc]
+# required by dev-ruby/rubygems-2.5.2::gentoo[ruby_targets_ruby22]
+# required by virtual/rubygems-11::gentoo[ruby_targets_ruby22]
+# required by dev-ruby/minitest-5.8.4::gentoo[-test,ruby_targets_ruby22]
+>=dev-ruby/json-1.8.6-r1 ruby_targets_ruby22
+
+# required by virtual/rubygems-11::gentoo[ruby_targets_ruby22]
+# required by dev-lang/ruby-2.2.8::gentoo
+# required by app-editors/gvim-8.0.0386::gentoo[ruby]
+# required by @selected
+# required by @world (argument)
+>=dev-ruby/rubygems-2.6.13 ruby_targets_ruby22
+
+# required by dev-lang/ruby-2.2.8::gentoo
+# required by dev-ruby/rubygems-2.6.14::gentoo[ruby_targets_ruby22]
+# required by virtual/rubygems-11::gentoo[ruby_targets_ruby22]
+# required by dev-ruby/racc-1.4.11::gentoo
+# required by dev-ruby/rdoc-4.2.0::gentoo[ruby_targets_ruby22]
+>=dev-ruby/minitest-5.9.1 ruby_targets_ruby22
+
+# required by kde-plasma/plasma-workspace-5.11.5::gentoo[systemd]
+# required by kde-plasma/plasma-nm-5.11.5::gentoo
+# required by kde-plasma/plasma-meta-5.11.5::gentoo[networkmanager]
+# required by @selected
+# required by @world (argument)
+>=sys-apps/dbus-1.10.18 user-session

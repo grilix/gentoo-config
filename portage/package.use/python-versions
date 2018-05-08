@@ -1,0 +1,9 @@
+# Enabling additional implementation in addition to the profile default
+# */* PYTHON_TARGETS: -* python2_7 python3_6
+# Replacing the profile default with specific implementation
+# */* PYTHON_SINGLE_TARGET: -* python3_6
+# Build vim for python2.7 instead of the above
+# (note: -* in PYTHON_TARGETS is optional but it makes it possible to avoid extraneous deps
+#app-editors/vim PYTHON_TARGETS: -* python2_7 PYTHON_SINGLE_TARGET: -* python2_7
+# Enable all Python implementation for Portage
+#sys-apps/portage PYTHON_TARGETS: *
